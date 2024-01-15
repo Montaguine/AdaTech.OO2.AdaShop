@@ -9,12 +9,21 @@ namespace AdaTech.AdaShop.Domain.Models.NewFolder
 {
     public abstract class EmployeeData : IEntity
     {
-        public static int IdCount = 0;
+        public static int IdCount;
         public string ID { get; private set; }
-        string Nome { get; set; }
-        string CPF { get; set; }
-        string Niss { get; set; }
+        public string Name { get; set; }
+        public string CPF { get; set; }
+        public string Niss { get; set; }
 
         //CONTRUTOR INCREMENTAR IdCount e atribuir a ID
+
+        public EmployeeData(string name, string cpf, string niss) 
+        {
+            IdCount++;
+            ID = IdCount.ToString();
+            Name = name;
+            CPF = cpf;
+            Niss = niss;
+        }
     }
 }
