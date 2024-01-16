@@ -9,6 +9,14 @@ namespace AdaTech.AdaShop.Domain.Models.Order
         public string CPF { get => CPF; private set { CPF = value; ID = value; } }
         public string Name { get; private set; }
 
+
+        public Customer(string cpf, string name)
+        {
+            CPF = cpf;
+            Name = name;
+        }
+
+        //Podem ser adicionadas:
         //DATA NASCIMENTO
         //ENDERECO
     }

@@ -7,8 +7,8 @@ namespace AdaTech.AdaShop.Domain.Models.Order
     //Ou seja, deve implementar os métodos e propriedade da interface IEntity
     public class Employee : EmployeeData
     {
-        public string ID { get; private set; }
-
-
+        public Employee(string name, string cpf, string niss) : base(name, cpf, niss)
+        {
+        }
     }
 }
